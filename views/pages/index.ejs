@@ -1,0 +1,116 @@
+<%- include('../layouts/head') %>
+<main>
+<section>
+    
+<!-- feature section - flexed -->
+        <div class="news-container ">
+            <div id="featureFlexWrap">
+                <div class="featureArticle "> 
+                    <% featureArticles.forEach(function(article,index){ %>
+                        <% if 
+                            ((typeof article.url=='object') || 
+                            (typeof article.title=='object') || 
+                            (typeof article.urlToImage=='object') || 
+                            (typeof article.content=='object')){ %>
+                            <% } else{ %>
+                                <a href="<%- article.url %>" target="_blank" class="news-box">
+                                    <img src="<%- article.urlToImage %>" alt="Image">
+                                    <div class="textWrap">
+                                        <h3><%- article.title %></h3>
+                                        <p><%- article.content.replace(/<[^>]+>/g, '') %></p>
+                                        <br>
+                                        <small>Updated: <span style="color:red;" ><%- new Date(article.publishedAt.slice(0,10)).toDateString() %>    <%- moment.utc(article.publishedAt).local().format('hh : mm A') %> </span></small>
+                                    </div>
+                                </a>
+                            <% } %>
+                    <% }) %>
+                </div>
+
+            </div>
+        
+        
+            </section>
+            <hr>
+            <a href="/headlines"><h2>Headelines</h2></a>
+            <hr>
+            <section>
+                    <div class="news-container ">
+                        <div class="news "> 
+                            <% headArticles.forEach(function(article,index){ %>
+                                <% if 
+                                    ((typeof article.url=='object') || 
+                                    (typeof article.title=='object') || 
+                                    (typeof article.urlToImage=='object') || 
+                                    (typeof article.content=='object')){ %>
+                                    <% } else{ %>
+                                        <a href="<%- article.url %>" target="_blank" class="news-box">
+                                            <img src="<%- article.urlToImage %>" alt="Image">
+                                            <h3><%- article.title %></h3>
+                                            <p><%- article.content.replace(/<[^>]+>/g, '') %></p>
+                                            <br>
+                                        </a>
+                                    <% } %>
+                            <% }) %>
+                        </div>
+                    </div>
+            </section>
+            <hr>
+            <a href="/sport"><h2>Sport</h2></a>
+            <hr>
+            <section>
+                <div class="news-container ">
+                        <div class="news "> 
+                            <% sportArticles.forEach(function(article,index){ %>
+                                <% if 
+                                    ((typeof article.url=='object') || 
+                                    (typeof article.title=='object') || 
+                                    (typeof article.urlToImage=='object') || 
+                                    (typeof article.content=='object')){ %>
+                                    <% } else{ %>
+                                        <a href="<%- article.url %>" target="_blank" class="news-box">
+                                            <img src="<%- article.urlToImage %>" alt="Image">
+                                            <h3><%- article.title %></h3>
+                                        </a>
+                                    <% } %>
+                            <% }) %>
+                        </div>
+                    </div>
+            </section>
+            <hr>
+            <a href="finance"><h2>Finance</h2></a>
+            <hr>
+            <section id="section-finance">
+                <div class="news-container ">
+                    
+                    <div id="sliderWrap">
+                        
+                        <div class="news">
+                            
+                            <% financeArticles.forEach(function(article,index){ %>
+                                <% if 
+                                    ((typeof article.url=='object') || 
+                                    (typeof article.title=='object') || 
+                                    (typeof article.urlToImage=='object') || 
+                                    (typeof article.content=='object')){ %>
+                                    <% } else{ %>
+                                        <a href="<%- article.url %>" target="_blank" class="news-box">
+                                            <img src="<%- article.urlToImage %>" alt="Image">
+                                            <h3><%- article.title %></h3>
+                                            <small>Updated: <span style="color:red;" ><%- new Date(article.publishedAt.slice(0,10)).toDateString() %>    <%- moment.utc(article.publishedAt).local().format('hh : mm A') %> </span></small>
+                                        </a>
+                                    <% } %>
+                            <% }) %>
+                            
+                        </div>
+                        <div id="sliderBtns">
+                            <button id="btnLeft">&#8249;</button> 
+                            <button id="btnRight">&#8250;</button> 
+                        </div>
+                        
+                    </div>
+                     
+                    </div>
+            </section>
+        </div>
+        
+<%- include('../layouts/foot') %>

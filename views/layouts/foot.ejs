@@ -1,0 +1,32 @@
+        <%- include('./partials/footer') %>
+        </main>
+    </div>
+    <script src="moment.js"></script>
+    <script src="moment-timezone-with-data.js"></script>
+
+    <script>
+
+
+
+
+        const btnLeft = document.getElementById('btnLeft');
+        const btnRight = document.getElementById('btnRight');
+        const sliderWrap = document.getElementById('sliderWrap');
+
+        btnLeft.addEventListener('click', ()=> {
+            sliderWrap.scrollBy({ 
+                    top: 0,  // could be negative value
+                    left: -800, 
+                    behavior: 'smooth' 
+                             });
+        })
+        btnRight.addEventListener('click', ()=> {
+            sliderWrap.scrollBy({ 
+                    top: 0,  // could be negative value
+                    left: 800, 
+                    behavior: 'smooth' 
+                             });
+        })
+    </script>
+</body>
+</html>

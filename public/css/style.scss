@@ -1,0 +1,249 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'News Cycle', sans-serif;
+}
+main{
+    padding: 40px 0;
+    section{
+    }
+}
+hr{
+    margin: 20px;
+}
+h2{
+    margin: auto;
+    text-align: center;
+}
+
+#nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 40px;
+    a{
+        img{
+            width: 120px;
+        }
+    }
+    #navbarSupportedContent{
+        form{
+            input{
+                border-radius: 50px;
+                padding: 5px;
+            }
+            button{
+                border-radius: 50px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+
+nav{
+    
+    #nav-search{
+        display: flex;
+        justify-content: space-between;
+        
+        a{}
+        button{}
+        #navbarSupportedContent{
+            form{
+                input{}
+                button{}
+            }
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        li{
+            list-style: none;
+            a{
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                color: gray;
+                transition: 0.4s;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: #303030;
+            }
+        }
+    }
+}
+
+.news-container{
+    padding: 0 80px;
+    #featureFlexWrap{
+        display: flex;
+       
+        .featureArticle{
+            display: flex;
+            .news-box:hover{
+                box-shadow: 0 0 10px rgb(216, 216, 216);
+
+            }
+            .news-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                grid-gap: 20px;
+                text-decoration: none;
+                color: grey;
+                transition: 0.2s;
+                padding: 5px;
+                img{
+                    width: 60%;
+                    object-fit: cover;
+                   
+                }
+                .textWrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-end;
+        
+                    height: 100%;
+                    h3{}
+                    p{}
+                    small{}
+                }
+             
+            }
+           
+        }
+    }
+    
+    .news{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax( 300px, 1fr ));
+        grid-gap: 2rem;
+        .news-box:hover{
+            box-shadow: 0 0 10px rgb(216, 216, 216);
+
+        }
+        .news-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 10px whitesmoke;
+            text-decoration: none;
+            color: grey;
+            width: 300px;
+            padding: 5px;
+            transition: 0.4s;
+            img{
+                width: 300px;
+                object-fit: cover;
+                height: 200px;
+                display: inline–block;
+            }
+            h3{}
+            p{}
+            small{}
+        }
+    }
+}
+#crypto-feed{
+    background: white;
+    a{
+        .thread{}
+    }
+}
+
+#section-finance{
+    
+    #sliderWrap{
+        overflow: hidden;
+        .news{
+            width: 280%;
+            display: flex;
+            padding: 0 40px;
+            .news-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                color: grey;
+                width: 300px;
+                transition: 0.4s;
+                img{
+                    width: 300px;
+                    object-fit: cover;
+                    height: 200px;
+                    padding–top: 20px;
+                    padding: 0.6%;
+                    display: inline–block;
+                }
+                h3{}
+                p{}
+                small{}
+            }
+        }
+        #sliderBtns{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            left: 0px;
+            position: absolute;
+            button{
+                height: 50px;
+                width: 30px;
+                border-radius: 30px;
+                font-size: 25px;
+                text-align: center;
+                bottom: 100px;
+                border: white;
+                background: #303030;
+                opacity: 0.8;
+                transition: 0.2s;
+                color: white;
+            }
+            button:hover{
+                opacity: 0.9;
+                cursor: pointer;
+            }
+            #btnLeft{
+                position: relative;
+                left: 30px;
+            }
+            #btnRight{
+                position: relative;
+                right: 30px;
+            }
+        }
+    }
+    
+}
+
+footer{
+    background: whitesmoke;
+    ul{
+        li{
+            float: left;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: #303030;
+                transition: 0.4s;
+                padding: 10px 20px;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
